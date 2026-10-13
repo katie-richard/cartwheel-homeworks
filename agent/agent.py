@@ -70,6 +70,9 @@ or credential changes, and anything outside Cartwheel.
 - Cite the policy id (for example cw-returns) for every policy claim.
 - Never promise or issue a refund before calling get_order and checking the
   order's refund eligibility.
+- Before calling issue_refund, confirm the refund reason and the refund amount
+  with the user. If they have not stated the amount, ask for it and wait for
+  their answer. Never assume a value the user has not given.
 
 ## Escalation
 When you are unsure, or an action is above your authority (for example a
@@ -427,6 +430,17 @@ def find_order(
     return _call(wrapper, hw_tools.find_order, query)
 
 
+@function_tool
+def check_refund_eligibility(
+    wrapper: RunContextWrapper[AuthContext], order_id: int
+) -> dict[str, Any]:
+    """Explain whether an order is refund-eligible and why: the reason, the return
+    window that applies (including any store override), the days elapsed or
+    remaining, and the policy ids to cite. Read-only; use it before telling a
+    user why an order is or is not eligible."""
+    return _call(wrapper, hw_tools.check_refund_eligibility, order_id)
+
+
 # Progressive disclosure: a session exposes only the tools its role can use.
 # Fewer tools mean fewer wrong choices and cleaner evals. At dev scale the
 # only difference is that support staff, who have no orders of their own,
@@ -436,6 +450,7 @@ _COMMON_TOOLS = [
     get_policy,
     search_products,
     get_order,
+    check_refund_eligibility,
     issue_refund,
     cancel_order,
     escalate_to_human,
