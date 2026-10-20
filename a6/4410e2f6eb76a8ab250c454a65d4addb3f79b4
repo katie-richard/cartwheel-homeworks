@@ -1,0 +1,27 @@
+tests/test_observability.py
+  s_af0ef91dd711af::t_2ca99281435ac3 1-34
+server/app.py
+  s_af0ef91dd711af::t_74b4f22d26ef19 126-146
+  s_af0ef91dd711af::t_ece31c2615709f 180-211
+observability/instrument.py
+  s_af0ef91dd711af::t_5b8fc68b152092 153-156
+  s_af0ef91dd711af::t_a91793a94e0657 125-129
+hw2-traces.json
+  s_af0ef91dd711af::t_11580a44b8447a 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "a64410e2f6eb76a8ab250c454a65d4addb3f79b4",
+  "prompts": {},
+  "sessions": {
+    "s_af0ef91dd711af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "25bb48a8-5291-4484-9487-0d1d5f328c40",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "katie-richard <kathleen.richard@deliveryhero.com>"
+    }
+  }
+}
