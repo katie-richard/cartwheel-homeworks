@@ -1,0 +1,39 @@
+tests/test_find_order_precision.py
+  s_af0ef91dd711af::t_c1776979924571 25-28,30-32
+  s_af0ef91dd711af::t_e1fc4a6c47af64 1-24,29
+agent/tools.py
+  s_af0ef91dd711af::t_f7241537430f2d 23-24
+  s_af0ef91dd711af::t_17e2da97dc9ed2 34
+  s_af0ef91dd711af::t_7ca8e668e06892 115-162
+  s_af0ef91dd711af::t_3de2279a6805ca 187-212
+  s_af0ef91dd711af::t_23b3f2e4bd2437 313-340
+  s_af0ef91dd711af::t_63500f86505ec0 26-27,30
+  s_af0ef91dd711af::t_d611b2bc2f9a7a 341-436
+  s_af0ef91dd711af::t_f903f93acca669 60-73
+  s_af0ef91dd711af::t_3354dd21f1ec42 257-279
+tests/test_check_refund_eligibility.py
+  s_af0ef91dd711af::t_6da780bafd5089 1-99
+agent/agent.py
+  s_af0ef91dd711af::t_bf16b830064555 73-75
+  s_af0ef91dd711af::t_d712424c500187 433-443
+  s_af0ef91dd711af::t_e4d8fb32ed75e4 453
+hw1-session.jsonl
+  s_af0ef91dd711af::t_d8ee73f11865c1 1-10
+  s_af0ef91dd711af::t_fabc60057d3e66 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "385a2bfe48f8d707b3e4ea3cd3185f541d3352ae",
+  "prompts": {},
+  "sessions": {
+    "s_af0ef91dd711af": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "25bb48a8-5291-4484-9487-0d1d5f328c40",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": null
+    }
+  }
+}
